@@ -1,0 +1,15 @@
+<strong>Has email: {{ has_email }}</strong>
+<ul>
+    {% for user in user_list %}
+        <li>
+            {% if user == request.user %}
+                <strong>
+                    {{ user.username }}
+                </strong>
+            {% else %}
+                {{ user.username }}
+            {% endif %}
+
+        </li>
+    {% endfor %}
+</ul>
